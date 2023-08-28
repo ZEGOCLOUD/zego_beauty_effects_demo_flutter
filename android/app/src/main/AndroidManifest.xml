@@ -18,7 +18,7 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
-        android:label="live_streaming_with_cohosting"
+        android:label="pkbattles"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

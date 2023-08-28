@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import '../internal/zego_service_define.dart';
+import '../live_audio_room_manager.dart';
 import '../utils/permission.dart';
 import '../utils/zegocloud_token.dart';
 import '../zego_sdk_key_center.dart';
@@ -87,6 +87,8 @@ class _LoginPageState extends State<LoginPage> {
                   }
                   await ZEGOSDKManager.instance
                       .connectUser(userIDController.text, userNameController.text, token: token);
+                  ZegoLiveAudioRoomManager.instance
+                      .updateUserAvatarUrl('https://storage.zego.im/IMKit/avatar/avatar-0.png');
                 },
                 child: const Text('Login'),
               ),

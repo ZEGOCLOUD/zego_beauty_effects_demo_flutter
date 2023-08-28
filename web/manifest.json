@@ -1,6 +1,6 @@
 {
-    "name": "live_streaming_with_cohosting",
-    "short_name": "live_streaming_with_cohosting",
+    "name": "pkbattles",
+    "short_name": "pkbattles",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

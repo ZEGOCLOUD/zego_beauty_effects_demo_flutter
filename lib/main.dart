@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'pages/login_page.dart';
 
+
+GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
 void main() {
   runApp(const MyApp());
 }
@@ -12,8 +15,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
-      title: 'ZegoBeautyEffectsDemo',
+      title: 'ZegoLiveStreamingWithCoHosting Demo',
       theme: ThemeData(
         // This is the theme of your application.
         //

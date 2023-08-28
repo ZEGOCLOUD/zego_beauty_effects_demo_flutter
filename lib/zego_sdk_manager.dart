@@ -1,8 +1,11 @@
 import 'package:flutter/foundation.dart';
-import 'beauty_effects/zego_effects_service.dart';
 
-import 'internal/zego_express_service.dart';
-import 'internal/zego_zim_service.dart';
+import 'internal/sdk/effect/zego_effects_service.dart';
+import 'internal/sdk/express/express_service.dart';
+import 'internal/sdk/zim/zim_service.dart';
+
+export 'internal/sdk/express/express_service.dart';
+export 'internal/sdk/zim/zim_service.dart';
 
 class ZEGOSDKManager {
   ZEGOSDKManager._internal();
@@ -16,9 +19,11 @@ class ZEGOSDKManager {
   int appID = 0;
   String appSign = '';
 
-  Future<void> init(int appID, String? appSign) async {
+  Future<void> init(int appID, String? appSign, {ZegoScenario scenario = ZegoScenario.Default}) async {
     await expressService.init(appID: appID, appSign: appSign);
     await zimService.init(appID: appID, appSign: appSign);
+    await effectsService.init(appID, appSign ?? '');
+
     this.appID = appID;
     this.appSign = appSign ?? '';
   }
@@ -37,15 +42,23 @@ class ZEGOSDKManager {
     }
   }
 
-  Future<void> connectUser(String userID, String userName,
-      {String? token}) async {
+  Future<void> connectUser(String userID, String userName, {String? token}) async {
     await expressService.connectUser(userID, userName, token: token);
     await zimService.connectUser(userID, userName, token: token);
   }
 
   Future<void> disconnectUser() async {
+    await logoutRoom();
     await expressService.disconnectUser();
     await zimService.disconnectUser();
+  }
+
+  Future<void> uploadLog() async {
+    await Future.wait([
+      expressService.uploadLog(),
+      zimService.uploadLog(),
+    ]);
+    return;
   }
 
   Future<ZegoRoomLoginResult> loginRoom(String roomID, {String? token}) async {
@@ -69,8 +82,8 @@ class ZEGOSDKManager {
     await zimService.logoutRoom();
   }
 
-  ZegoUserInfo? get localUser => expressService.localUser;
-  ZegoUserInfo? getUser(String userID) {
+  ZegoSDKUser? get currentUser => expressService.currentUser;
+  ZegoSDKUser? getUser(String userID) {
     for (final user in expressService.userInfoList) {
       if (userID == user.userID) {
         return user;

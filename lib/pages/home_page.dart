@@ -1,8 +1,15 @@
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import '../define.dart';
-import 'live_page.dart';
+
+import '../live_audio_room_manager.dart';
+import '../utils/zegocloud_token.dart';
+import '../zego_sdk_key_center.dart';
+import '../zego_sdk_manager.dart';
+import 'audio_room/audio_room_page.dart';
+import '../internal/business/audioRoom/layout_config.dart';
+import 'live_streaming/live_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,30 +19,43 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final roomIDController =
-      TextEditingController(text: Random().nextInt(999).toString());
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
-      ),
-      body: Padding(
+      appBar: AppBar(title: const Text('Home Page')),
+      body:  Padding(
         padding: const EdgeInsets.only(top: 100, left: 30, right: 30),
         child: Column(
-          children: [
-            roomIDTextField(),
-            const SizedBox(
-              height: 20,
-            ),
-            hostJoinLivePageButton(),
-            const SizedBox(
-              height: 20,
-            ),
-            audienceJoinLivePageButton(),
+          children: const [
+            LiveStreamingEntry(),
+            AudioRoomEntry(),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class LiveStreamingEntry extends StatefulWidget {
+  const LiveStreamingEntry({super.key});
+
+  @override
+  State<LiveStreamingEntry> createState() => _LiveStreamingEntryState();
+}
+
+class _LiveStreamingEntryState extends State<LiveStreamingEntry> {
+  final roomIDController = TextEditingController(text: Random().nextInt(9999999).toString());
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Column(
+        children: [
+          roomIDTextField(),
+          const SizedBox(height: 20),
+          hostJoinLivePageButton(),
+          const SizedBox(height: 20),
+          audienceJoinLivePageButton(),
+        ],
       ),
     );
   }
@@ -46,10 +66,7 @@ class _HomePageState extends State<HomePage> {
       child: Row(
         children: [
           const Text('RoomID:'),
-          const SizedBox(
-            width: 10,
-            height: 20,
-          ),
+          const SizedBox(width: 10, height: 20),
           Flexible(
             child: TextField(
               controller: roomIDController,
@@ -72,8 +89,7 @@ class _HomePageState extends State<HomePage> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => ZegoLivePage(
-                  roomID: roomIDController.text, role: ZegoLiveRole.host),
+              builder: (context) => ZegoLivePage(roomID: roomIDController.text, role: ZegoLiveRole.host),
             ),
           );
         },
@@ -91,12 +107,128 @@ class _HomePageState extends State<HomePage> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ZegoLivePage(
-                    roomID: roomIDController.text, role: ZegoLiveRole.audience),
+                builder: (context) => ZegoLivePage(roomID: roomIDController.text, role: ZegoLiveRole.audience),
               ),
             );
           },
           child: const Text('Watch a Live Streaming')),
     );
+  }
+}
+
+class AudioRoomEntry extends StatefulWidget {
+  const AudioRoomEntry({super.key});
+
+  @override
+  State<AudioRoomEntry> createState() => _AudioRoomEntryState();
+}
+
+class _AudioRoomEntryState extends State<AudioRoomEntry> {
+  final roomIDController = TextEditingController(text: Random().nextInt(9999999).toString());
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Column(
+        children: [
+          roomIDTextField(),
+          const SizedBox(height: 20),
+          hostJoinLiveAudioRoomButton(),
+          const SizedBox(height: 20),
+          audienceJoinLiveAudioRoomButton(),
+        ],
+      ),
+    );
+  }
+
+  Widget roomIDTextField() {
+    return SizedBox(
+      width: 350,
+      child: Row(
+        children: [
+          const Text('RoomID:'),
+          const SizedBox(width: 10, height: 20),
+          Flexible(
+            child: TextField(
+              controller: roomIDController,
+              decoration: const InputDecoration(
+                labelText: 'please input roomID',
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget hostJoinLiveAudioRoomButton() {
+    return SizedBox(
+      width: 200,
+      height: 50,
+      child: ElevatedButton(
+        onPressed: hostPress,
+        child: const Text('Start a Audio Room'),
+      ),
+    );
+  }
+
+  void hostPress() {
+    // ! ** Warning: ZegoTokenUtils is only for use during testing. When your application goes live,
+    // ! ** tokens must be generated by the server side. Please do not generate tokens on the client side!
+    final token = kIsWeb
+        ? ZegoTokenUtils.generateToken(
+            SDKKeyCenter.appID, SDKKeyCenter.serverSecret, ZEGOSDKManager.instance.currentUser!.userID)
+        : null;
+    ZegoLiveAudioRoomManager.instance.initWithConfig(ZegoLiveAudioRoomLayoutConfig(), ZegoLiveRole.host);
+    ZEGOSDKManager.instance.loginRoom(roomIDController.text, token: token).then((value) {
+      if (value.errorCode == 0) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => AudioRoomPage(
+              roomID: roomIDController.text,
+              role: ZegoLiveRole.host,
+            ),
+          ),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('login room failed: ${value.errorCode}')));
+      }
+    });
+  }
+
+  Widget audienceJoinLiveAudioRoomButton() {
+    return SizedBox(
+      width: 200,
+      height: 50,
+      child: ElevatedButton(
+        onPressed: audiencePress,
+        child: const Text('Join a Audio Room'),
+      ),
+    );
+  }
+
+  void audiencePress() {
+    // ! ** Warning: ZegoTokenUtils is only for use during testing. When your application goes live,
+    // ! ** tokens must be generated by the server side. Please do not generate tokens on the client side!
+    final token = kIsWeb
+        ? ZegoTokenUtils.generateToken(
+            SDKKeyCenter.appID, SDKKeyCenter.serverSecret, ZEGOSDKManager.instance.currentUser!.userID)
+        : null;
+    ZegoLiveAudioRoomManager.instance.initWithConfig(ZegoLiveAudioRoomLayoutConfig(), ZegoLiveRole.audience);
+    ZEGOSDKManager.instance.loginRoom(roomIDController.text, token: token).then((value) {
+      if (value.errorCode == 0) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => AudioRoomPage(
+              roomID: roomIDController.text,
+              role: ZegoLiveRole.audience,
+            ),
+          ),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('login room failed: ${value.errorCode}')));
+      }
+    });
   }
 }
