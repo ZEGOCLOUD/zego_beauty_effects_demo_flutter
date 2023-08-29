@@ -129,21 +129,26 @@ class ZegoLivePageState extends State<ZegoLivePage> {
     return ValueListenableBuilder<bool>(
       valueListenable: liveStreamingManager.isLivingNotifier,
       builder: (context, isLiveing, _) {
-        return Scaffold(
-          body: Stack(
-            children: [
-              backgroundImage(),
-              hostVideoView(),
-              coHostVideoView(),
-              if (!isLiveing && widget.role == ZegoLiveRole.host)
-                startLiveButton(),
-              hostText(),
-              leaveButton(),
-              if (widget.role == ZegoLiveRole.host) memberButton(),
-              if (isLiveing && widget.role == ZegoLiveRole.host) pkButton(),
-              if (isLiveing) bottomBar(),
-            ],
-          ),
+        return ValueListenableBuilder<RoomPKState>(
+          valueListenable: ZegoLiveStreamingManager().roomPKStateNoti,
+          builder: (context, RoomPKState roomPKState, child) {
+            return Scaffold(
+              body: Stack(
+                children: [
+                  backgroundImage(),
+                  hostVideoView(),
+                  if (roomPKState != RoomPKState.isStartPK) coHostVideoView(),
+                  if (!isLiveing && widget.role == ZegoLiveRole.host)
+                    startLiveButton(),
+                  hostText(),
+                  leaveButton(),
+                  if (widget.role == ZegoLiveRole.host) memberButton(),
+                  if (isLiveing && widget.role == ZegoLiveRole.host) pkButton(),
+                  if (isLiveing) bottomBar(),
+                ],
+              ),
+            );
+          },
         );
       },
     );
