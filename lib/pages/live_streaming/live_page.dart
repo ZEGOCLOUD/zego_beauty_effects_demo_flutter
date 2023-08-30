@@ -116,8 +116,10 @@ class ZegoLivePageState extends State<ZegoLivePage> {
   @override
   void dispose() {
     super.dispose();
+    liveStreamingManager
+      ..leaveRoom()
+      ..uninit();
     ZEGOSDKManager.instance.expressService.stopPreview();
-    ZEGOSDKManager.instance.logoutRoom();
     ZEGOSDKManager.instance.unInitEffects();
     for (final subscription in subscriptions) {
       subscription.cancel();
@@ -324,9 +326,6 @@ class ZegoLivePageState extends State<ZegoLivePage> {
             backgroundColor: Colors.black26,
             child: IconButton(
               onPressed: () {
-                liveStreamingManager
-                  ..leaveRoom()
-                  ..uninit();
                 Navigator.pop(context);
               },
               icon: Image.asset('assets/icons/nav_close.png'),
@@ -516,6 +515,7 @@ class ZegoLivePageState extends State<ZegoLivePage> {
     showingPKDialog = true;
     showDialog(
       context: context,
+      barrierDismissible: false,
       builder: (context) {
         return CupertinoAlertDialog(
           title: const Text('receive pk invitation'),
@@ -530,7 +530,7 @@ class ZegoLivePageState extends State<ZegoLivePage> {
             CupertinoDialogAction(
               child: const Text('Agree'),
               onPressed: () {
-                liveStreamingManager.acceptPKBattleRequest(requestID, false);
+                liveStreamingManager.acceptPKBattleRequest(requestID);
                 Navigator.pop(context);
               },
             ),
