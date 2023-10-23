@@ -50,15 +50,8 @@ class _CallingPageState extends State<CallingPage> {
           SDKKeyCenter.appID, SDKKeyCenter.serverSecret, ZEGOSDKManager().currentUser?.userID ?? '');
     }
     final roomID = widget.callData.callID;
-    ZEGOSDKManager.instance
-        .loginRoom(
-            roomID,
-            widget.callData.callType == ZegoCallType.voice
-                ? ZegoScenario.StandardVoiceCall
-                : ZegoScenario.StandardVideoCall,
-            token: token)
-        .then((value) {
-      if (value.errorCode == 0) {
+    ZEGOSDKManager.instance.expressService.loginRoom(roomID, token: token).then((ZegoRoomLoginResult joinRoomResult) {
+      if (joinRoomResult.errorCode == 0) {
         ZEGOSDKManager.instance.expressService.turnMicrophoneOn(micIsOn);
         ZEGOSDKManager.instance.expressService.setAudioRouteToSpeaker(isSpeaker);
         if (widget.callData.callType == ZegoCallType.voice) {
@@ -71,7 +64,7 @@ class _CallingPageState extends State<CallingPage> {
         ZEGOSDKManager.instance.expressService.startPublishingStream(ZegoCallManager().getMainStreamID());
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('join room fail: ${value.errorCode},${value.extendedData}')),
+          SnackBar(content: Text('join room fail: ${joinRoomResult.errorCode},${joinRoomResult.extendedData}')),
         );
       }
     });

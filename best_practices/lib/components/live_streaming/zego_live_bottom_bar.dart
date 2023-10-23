@@ -2,10 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-import '../../internal/sdk/zim/Define/zim_define.dart';
-import '../../internal/sdk/utils/flutter_extension.dart';
 import '../../internal/sdk/zim/Define/zim_room_request.dart';
-import '../../live_audio_room_manager.dart';
 import '../../zego_live_streaming_manager.dart';
 import '../../zego_sdk_manager.dart';
 import '../common/zego_switch_camera_button.dart';
@@ -50,6 +47,7 @@ class _ZegoLiveBottomBarState extends State<ZegoLiveBottomBar> {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          beautyEffectButton(),
           toggleMicButton(),
           toggleCameraButton(),
           switchCameraButton(),
@@ -74,6 +72,7 @@ class _ZegoLiveBottomBarState extends State<ZegoLiveBottomBar> {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          beautyEffectButton(),
           toggleMicButton(),
           toggleCameraButton(),
           switchCameraButton(),
@@ -113,13 +112,22 @@ class _ZegoLiveBottomBarState extends State<ZegoLiveBottomBar> {
     });
   }
 
+  Widget beautyEffectButton() {
+    return LayoutBuilder(builder: (context, constrains) {
+      return const SizedBox(
+        width: 50,
+        height: 50,
+        child: null,
+      );
+    });
+  }
+
   Widget applyCoHostButton() {
     return SizedBox(
       width: 120,
       height: 40,
       child: OutlinedButton(
-          style: OutlinedButton.styleFrom(
-              side: const BorderSide(width: 1, color: Colors.white)),
+          style: OutlinedButton.styleFrom(side: const BorderSide(width: 1, color: Colors.white)),
           onPressed: () {
             final signaling = jsonEncode({
               'room_request_type': RoomRequestType.audienceApplyToBecomeCoHost,
@@ -128,11 +136,9 @@ class _ZegoLiveBottomBarState extends State<ZegoLiveBottomBar> {
                 .sendRoomRequest(ZegoLiveStreamingManager.instance.hostNoti.value?.userID ?? '', signaling)
                 .then((value) {
               widget.applying?.value = true;
-              myRoomRequest = ZEGOSDKManager.instance.zimService
-                  .roomRequestMapNoti.value[value.requestID];
+              myRoomRequest = ZEGOSDKManager.instance.zimService.roomRequestMapNoti.value[value.requestID];
             }).catchError((error) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('apply to co-host failed: $error')));
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('apply to co-host failed: $error')));
             });
           },
           child: const Text(
@@ -147,16 +153,13 @@ class _ZegoLiveBottomBarState extends State<ZegoLiveBottomBar> {
       width: 120,
       height: 40,
       child: OutlinedButton(
-          style: OutlinedButton.styleFrom(
-              side: const BorderSide(width: 1, color: Colors.white)),
+          style: OutlinedButton.styleFrom(side: const BorderSide(width: 1, color: Colors.white)),
           onPressed: () {
-            ZEGOSDKManager.instance.zimService
-                .cancelRoomRequest(myRoomRequest?.requestID ?? '')
-                .then((value) {
+            ZEGOSDKManager.instance.zimService.cancelRoomRequest(myRoomRequest?.requestID ?? '').then((value) {
               widget.applying?.value = false;
             }).catchError((error) {
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text('Cancel the application failed: $error')));
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text('Cancel the application failed: $error')));
             });
           },
           child: const Text(
@@ -171,8 +174,7 @@ class _ZegoLiveBottomBarState extends State<ZegoLiveBottomBar> {
       width: 120,
       height: 40,
       child: OutlinedButton(
-        style: OutlinedButton.styleFrom(
-            side: const BorderSide(width: 1, color: Colors.white)),
+        style: OutlinedButton.styleFrom(side: const BorderSide(width: 1, color: Colors.white)),
         onPressed: () {
           ZegoLiveStreamingManager.instance.endCoHost();
         },

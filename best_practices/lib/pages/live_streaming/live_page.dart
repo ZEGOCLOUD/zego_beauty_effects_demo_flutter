@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:convert' as convert;
-import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -11,8 +9,8 @@ import '../../components/common/zego_audio_video_view.dart';
 import '../../components/common/zego_member_button.dart';
 import '../../components/live_streaming/zego_live_bottom_bar.dart';
 import '../../components/live_streaming/zego_pk_view.dart';
-import '../../internal/sdk/zim/Define/zim_define.dart';
-import '../../internal/sdk/utils/flutter_extension.dart';
+import '../../faceunity/faceunity_button.dart';
+import '../../faceunity/faceunity_manager.dart';
 import '../../internal/sdk/zim/Define/zim_room_request.dart';
 import '../../utils/zegocloud_token.dart';
 import '../../zego_live_streaming_manager.dart';
@@ -68,6 +66,8 @@ class ZegoLivePageState extends State<ZegoLivePage> {
       zimService.onOutgoingRoomRequestRejectedStreamCtrl.stream.listen(onOutgoingRoomRequestRejected),
     ]);
 
+    FaceunityManager().initFaceunity();
+
     if (widget.role == ZegoLiveRole.audience) {
       //Join room
       liveStreamingManager.currentUserRoleNoti.value = ZegoLiveRole.audience;
@@ -79,7 +79,7 @@ class ZegoLivePageState extends State<ZegoLivePage> {
         token = ZegoTokenUtils.generateToken(
             SDKKeyCenter.appID, SDKKeyCenter.serverSecret, ZEGOSDKManager.instance.currentUser!.userID);
       }
-      ZEGOSDKManager.instance.loginRoom(widget.roomID, ZegoScenario.Broadcast,token: token).then(
+      ZEGOSDKManager.instance.loginRoom(widget.roomID, token: token).then(
         (value) {
           if (value.errorCode != 0) {
             ScaffoldMessenger.of(context)
@@ -103,6 +103,7 @@ class ZegoLivePageState extends State<ZegoLivePage> {
       ..leaveRoom()
       ..uninit();
     ZEGOSDKManager.instance.expressService.stopPreview();
+    FaceunityManager().uninitFaceunity();
     for (final subscription in subscriptions) {
       subscription.cancel();
     }
@@ -128,6 +129,7 @@ class ZegoLivePageState extends State<ZegoLivePage> {
                   if (widget.role == ZegoLiveRole.host) memberButton(),
                   if (isLiveing && widget.role == ZegoLiveRole.host) pkButton(),
                   if (isLiveing) bottomBar(),
+                  const FaceunitySettingButton(),
                 ],
               ),
             );
