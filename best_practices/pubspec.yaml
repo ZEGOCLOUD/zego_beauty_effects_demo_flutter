@@ -1,20 +1,23 @@
 name: pkbattles
 description: A new Flutter project.
-publish_to: 'none' 
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.2 <3.0.0'
+  sdk: ">=2.19.2 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  zego_express_engine: ^3.6.1
-  permission_handler: ^10.4.3
+  zego_express_engine: ^3.8.1
+  permission_handler: ^11.0.0
+  shared_preferences: ^2.2.1
   encrypt: ^5.0.1
-  zego_zim: ^2.9.0
+  zego_zim: ^2.10.0+3
+  zego_faceunity_plugin:
+    path: zego_faceunity_plugin
 
 dev_dependencies:
   flutter_test:
@@ -23,7 +26,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
-
   uses-material-design: true
   assets:
     - assets/icons/
+    - assets/beautyIcons/

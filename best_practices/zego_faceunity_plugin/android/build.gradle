@@ -1,0 +1,53 @@
+group 'im.zego.zego_faceunity_plugin'
+version '1.0'
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        maven { url 'https://www.jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.faceunity.com/repository/maven-public/' }
+        google()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 33
+    ndkVersion '21.3.6528147'
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdk 33
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86'
+        }
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation project(path: ':zego_express_engine')
+    implementation 'com.faceunity:nama:8.5.0'
+}

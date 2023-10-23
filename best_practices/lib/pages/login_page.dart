@@ -36,6 +36,8 @@ class _LoginPageState extends State<LoginPage> {
           .listen((ZIMServiceConnectionStateChangedEvent event) {
         debugPrint('connectionStateStreamCtrl: $event');
         if (event.state == ZIMConnectionState.connected) {
+          ZegoLiveAudioRoomManager.instance
+              .updateUserAvatarUrl('https://robohash.org/${userIDController.text}.png?set=set4');
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => const HomePage()),
@@ -91,8 +93,6 @@ class _LoginPageState extends State<LoginPage> {
                   }
                   await ZEGOSDKManager.instance
                       .connectUser(userIDController.text, userNameController.text, token: token);
-                  ZegoLiveAudioRoomManager.instance
-                      .updateUserAvatarUrl('https://storage.zego.im/IMKit/avatar/avatar-0.png');
                 },
                 child: const Text('Login'),
               ),

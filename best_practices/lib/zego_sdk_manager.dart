@@ -12,9 +12,15 @@ class ZEGOSDKManager {
   ExpressService expressService = ExpressService.instance;
   ZIMService zimService = ZIMService.instance;
 
+  int appID = 0;
+  String appSign = '';
+
   Future<void> init(int appID, String? appSign, {ZegoScenario scenario = ZegoScenario.Default}) async {
     await expressService.init(appID: appID, appSign: appSign);
     await zimService.init(appID: appID, appSign: appSign);
+
+    this.appID = appID;
+    this.appSign = appSign ?? '';
   }
 
   Future<void> connectUser(String userID, String userName, {String? token}) async {
@@ -36,13 +42,13 @@ class ZEGOSDKManager {
     return;
   }
 
-  Future<ZegoRoomLoginResult> loginRoom(String roomID, ZegoScenario scenario, {String? token}) async {
+  Future<ZegoRoomLoginResult> loginRoom(String roomID, {String? token}) async {
     // await these two methods
     final expressResult = await expressService.loginRoom(roomID, token: token);
     if (expressResult.errorCode != 0) {
       return expressResult;
     }
-    expressService.setRoomScenario(scenario);
+
     final zimResult = await zimService.loginRoom(roomID);
 
     // rollback if one of them failed
