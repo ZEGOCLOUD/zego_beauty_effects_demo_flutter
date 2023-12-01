@@ -12,18 +12,18 @@ class FaceunityManager {
   FaceunityManager._internal();
 
   List<Map<String, dynamic>> beautyParamList = [
-    {'name': '美白', 'value': 1.0, 'min': 0.0, 'max': 2.0},
-    {'name': '红润', 'value': 0.5, 'min': 0.0, 'max': 2.0},
-    {'name': '磨皮', 'value': 1.0, 'min': 0.0, 'max': 3.0},
-    {'name': '大眼', 'value': 0.4, 'min': 0.0, 'max': 1.0},
-    {'name': '瘦脸', 'value': 0.0, 'min': 0.0, 'max': 1.0},
-    {'name': 'V脸', 'value': 0.5, 'min': 0.0, 'max': 1.0},
-    {'name': '窄脸', 'value': 0.0, 'min': 0.0, 'max': 1.0},
-    {'name': '小脸', 'value': 0.0, 'min': 0.0, 'max': 1.0},
-    {'name': '下巴', 'value': 0.3, 'min': 0.0, 'max': 1.0},
-    {'name': '额头', 'value': 0.3, 'min': 0.0, 'max': 1.0},
-    {'name': '鼻子', 'value': 0.5, 'min': 0.0, 'max': 1.0},
-    {'name': '嘴型', 'value': 0.4, 'min': 0.0, 'max': 1.0},
+    {'name': 'Whitening', 'value': 1.0, 'min': 0.0, 'max': 2.0},
+    {'name': 'Rosy', 'value': 0.5, 'min': 0.0, 'max': 2.0},
+    {'name': 'Skin', 'value': 1.0, 'min': 0.0, 'max': 3.0},
+    {'name': 'Big eyes', 'value': 0.4, 'min': 0.0, 'max': 1.0},
+    {'name': 'Slim face', 'value': 0.0, 'min': 0.0, 'max': 1.0},
+    {'name': 'V face', 'value': 0.5, 'min': 0.0, 'max': 1.0},
+    {'name': 'Narrow face', 'value': 0.0, 'min': 0.0, 'max': 1.0},
+    {'name': 'Small face', 'value': 0.0, 'min': 0.0, 'max': 1.0},
+    {'name': 'Chin', 'value': 0.3, 'min': 0.0, 'max': 1.0},
+    {'name': 'forehead', 'value': 0.3, 'min': 0.0, 'max': 1.0},
+    {'name': 'nose', 'value': 0.5, 'min': 0.0, 'max': 1.0},
+    {'name': 'Lip shape', 'value': 0.4, 'min': 0.0, 'max': 1.0},
   ];
 
   Future<void> initFaceunity() async {
