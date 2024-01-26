@@ -19,6 +19,8 @@ dependencies:
   zego_zim: ^2.13.1
   cached_network_image: ^3.3.0
   faker: ^2.1.0
+  transparent_image: ^2.0.1
+  svgaplayer_flutter: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -32,3 +34,4 @@ flutter:
     - assets/icons/
     - assets/beautyIcons/
     - assets/images/
+    - assets/gift/

@@ -123,6 +123,17 @@ class ZegoMixerSoundLevelUpdateEvent {
   }
 }
 
+class ZegoPlayerStateChangeEvent {
+  final ZegoMediaPlayerState state;
+  final int errorCode;
+
+  ZegoPlayerStateChangeEvent({required this.state, required this.errorCode});
+   @override
+  String toString() {
+    return 'ZegoPlayerStateChangeEvent{state: $state, errorCode:$errorCode}';
+  }
+}
+
 class ZIMServiceConnectionStateChangedEvent {
   final ZIMConnectionState state;
   final ZIMConnectionEvent event;
