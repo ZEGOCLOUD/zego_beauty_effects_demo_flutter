@@ -1,4 +1,4 @@
-package com.zegocloud.demo.cohosting
+package com.zegocloud.livestreaming.cohosting
 
 import android.graphics.SurfaceTexture
 import im.zego.effects.entity.ZegoEffectsVideoFrameParam

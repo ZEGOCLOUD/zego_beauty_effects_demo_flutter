@@ -1,6 +1,6 @@
-package com.zegocloud.demo.cohosting
+package com.zegocloud.livestreaming.cohosting
 
-import com.zegocloud.demo.cohosting.ZegoBeautyPlugin
+import com.zegocloud.livestreaming.cohosting.ZegoBeautyPlugin
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 

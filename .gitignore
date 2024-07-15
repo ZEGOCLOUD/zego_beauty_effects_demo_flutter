@@ -79,3 +79,5 @@
 **/.settings
 **/GeneratedPluginRegistrant.*
 ./todo.txt
+
+**/zego_sdk_key_center.dart

@@ -1,4 +1,4 @@
-package com.zegocloud.demo.cohosting
+package com.zegocloud.livestreaming.cohosting
 
 import android.content.Context
 import android.util.Log
