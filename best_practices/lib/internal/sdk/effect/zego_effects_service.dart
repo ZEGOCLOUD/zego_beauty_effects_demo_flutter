@@ -20,7 +20,7 @@ class EffectsService {
   String appSign = '';
 
   final backendApiUrl =
-      'https://aieffects-api.zego.im/?Action=DescribeEffectsLicense';
+      'https://aieffects-api.zego.im?Action=DescribeEffectsLicense';
 
   String resourcesFolder = '';
 
@@ -45,10 +45,12 @@ class EffectsService {
     await EffectsHelper.setResources();
     resourcesFolder = EffectsHelper.resourcesFolder;
 
-    final ret = await ZegoEffectsPlugin.instance.create(license);
-    debugPrint('ZegoEffectsPlugin init result: $ret');
+    final createRet = await ZegoEffectsPlugin.instance.create(license);
+    debugPrint('ZegoEffectsPlugin create result: $createRet');
 
-    await ZegoEffectsPlugin.instance.initEnv(const Size(720, 1280));
+    final initEnvRet =
+        await ZegoEffectsPlugin.instance.initEnv(const Size(720, 1280));
+    debugPrint('ZegoEffectsPlugin init env result: $initEnvRet');
 
     await enableCustomVideoProcessing();
 
