@@ -228,14 +228,16 @@ class ZegoForeheadSlimmingEditor implements ZegoBeautyEditor {
 
 /// Filters
 class ZegoFilterEditor implements ZegoBeautyEditor {
-  final String path;
+  final String name;
 
-  ZegoFilterEditor(this.path);
+  ZegoFilterEditor({
+    required this.name,
+  });
 
   @override
   void enable(bool enable) {
-    ZegoEffectsPlugin.instance.setFilterPath(enable ? path : '');
-    debugPrint('setFilter() called with: enable = [$enable], path: $path');
+    ZegoEffectsPlugin.instance.setFilter(enable ? name : '');
+    debugPrint('setFilter() called with: enable = [$enable], name: $name');
   }
 
   @override
@@ -246,13 +248,15 @@ class ZegoFilterEditor implements ZegoBeautyEditor {
 
 /// Makeup
 class ZegoLipstickEditor implements ZegoBeautyEditor {
-  final String path;
-  ZegoLipstickEditor(this.path);
+  final String name;
+  ZegoLipstickEditor({
+    required this.name,
+  });
 
   @override
   void enable(bool enable) {
-    ZegoEffectsPlugin.instance.setLipstickPath(enable ? path : '');
-    debugPrint('setLipstick() called with: enable = [$enable], path: $path');
+    ZegoEffectsPlugin.instance.setLipstick(enable ? name : '');
+    debugPrint('setLipstick() called with: enable = [$enable], name: $name');
   }
 
   @override
@@ -262,13 +266,15 @@ class ZegoLipstickEditor implements ZegoBeautyEditor {
 }
 
 class ZegoBlusherMakeupEditor implements ZegoBeautyEditor {
-  final String path;
-  ZegoBlusherMakeupEditor(this.path);
+  final String name;
+  ZegoBlusherMakeupEditor({
+    required this.name,
+  });
 
   @override
   void enable(bool enable) {
-    ZegoEffectsPlugin.instance.setBlusherPath(enable ? path : '');
-    debugPrint('setBlusherPath() called with: enable = [$enable], path: $path');
+    ZegoEffectsPlugin.instance.setBlusher(enable ? name : '');
+    debugPrint('setBlusherPath() called with: enable = [$enable], name: $name');
   }
 
   @override
@@ -278,13 +284,16 @@ class ZegoBlusherMakeupEditor implements ZegoBeautyEditor {
 }
 
 class ZegoEyelashesEditor implements ZegoBeautyEditor {
-  final String path;
-  ZegoEyelashesEditor(this.path);
+  final String name;
+  ZegoEyelashesEditor({
+    required this.name,
+  });
 
   @override
   void enable(bool enable) {
-    ZegoEffectsPlugin.instance.setEyelashesPath(enable ? path : '');
-    debugPrint('setEyelashesPath() called with: enable = [$enable], path: $path');
+    ZegoEffectsPlugin.instance.setEyelashes(enable ? name : '');
+    debugPrint(
+        'setEyelashesPath() called with: enable = [$enable], name: $name');
   }
 
   @override
@@ -294,13 +303,16 @@ class ZegoEyelashesEditor implements ZegoBeautyEditor {
 }
 
 class ZegoEyelinerEditor implements ZegoBeautyEditor {
-  final String path;
-  ZegoEyelinerEditor(this.path);
+  final String name;
+  ZegoEyelinerEditor({
+    required this.name,
+  });
 
   @override
   void enable(bool enable) {
-    ZegoEffectsPlugin.instance.setEyelinerPath(enable ? path : '');
-    debugPrint('setEyelinerPath() called with: enable = [$enable], path: $path');
+    ZegoEffectsPlugin.instance.setEyeliner(enable ? name : '');
+    debugPrint(
+        'setEyelinerPath() called with: enable = [$enable], name: $name');
   }
 
   @override
@@ -310,13 +322,16 @@ class ZegoEyelinerEditor implements ZegoBeautyEditor {
 }
 
 class ZegoEyeshadowEditor implements ZegoBeautyEditor {
-  final String path;
-  ZegoEyeshadowEditor(this.path);
+  final String name;
+  ZegoEyeshadowEditor({
+    required this.name,
+  });
 
   @override
   void enable(bool enable) {
-    ZegoEffectsPlugin.instance.setEyeshadowPath(enable ? path : '');
-    debugPrint('setEyeshadowPath() called with: enable = [$enable], path: $path');
+    ZegoEffectsPlugin.instance.setEyeshadow(enable ? name : '');
+    debugPrint(
+        'setEyeshadowPath() called with: enable = [$enable], name: $name');
   }
 
   @override
@@ -326,13 +341,16 @@ class ZegoEyeshadowEditor implements ZegoBeautyEditor {
 }
 
 class ZegoColoredContactsEditor implements ZegoBeautyEditor {
-  final String path;
-  ZegoColoredContactsEditor(this.path);
+  final String name;
+  ZegoColoredContactsEditor({
+    required this.name,
+  });
 
   @override
   void enable(bool enable) {
-    ZegoEffectsPlugin.instance.setColoredcontactsPath(enable ? path : '');
-    debugPrint('setColoredcontactsPath() called with: enable = [$enable], path: $path');
+    ZegoEffectsPlugin.instance.setColoredcontacts(enable ? name : '');
+    debugPrint(
+        'setColoredcontactsPath() called with: enable = [$enable], name: $name');
   }
 
   @override
@@ -343,13 +361,15 @@ class ZegoColoredContactsEditor implements ZegoBeautyEditor {
 
 /// Style Makeup
 class ZegoStyleMakeupEditor implements ZegoBeautyEditor {
-  final String path;
-  ZegoStyleMakeupEditor(this.path);
+  final String name;
+  ZegoStyleMakeupEditor({
+    required this.name,
+  });
 
   @override
   void enable(bool enable) {
-    ZegoEffectsPlugin.instance.setMakeupPath(enable ? path : '');
-    debugPrint('setMakeupPath() called with: enable = [$enable], path: $path');
+    ZegoEffectsPlugin.instance.setMakeup(enable ? name : '');
+    debugPrint('setMakeupPath() called with: enable = [$enable], name: $name');
   }
 
   @override
@@ -360,14 +380,16 @@ class ZegoStyleMakeupEditor implements ZegoBeautyEditor {
 
 /// Stickers
 class ZegoStickerEditor implements ZegoBeautyEditor {
-  final String path;
+  final String name;
 
-  ZegoStickerEditor(this.path);
+  ZegoStickerEditor({
+    required this.name,
+  });
 
   @override
   void enable(bool enable) {
-    ZegoEffectsPlugin.instance.setPendantPath(enable ? path : '');
-    debugPrint('setPendantPath() called with: enable = [$enable], path: $path');
+    ZegoEffectsPlugin.instance.setPendant(enable ? name : '');
+    debugPrint('setPendantPath() called with: enable = [$enable], name: $name');
   }
 
   @override
@@ -378,7 +400,9 @@ class ZegoStickerEditor implements ZegoBeautyEditor {
 class ZegoPortraitSegmentationEditor implements ZegoBeautyEditor {
   final String path;
 
-  ZegoPortraitSegmentationEditor(this.path);
+  ZegoPortraitSegmentationEditor({
+    required this.path,
+  });
 
   @override
   void enable(bool enable) {

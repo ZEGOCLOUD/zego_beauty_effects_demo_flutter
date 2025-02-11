@@ -3,10 +3,11 @@ import '../zego_effects_service.dart';
 import 'beauty_ability/zego_beauty_ability.dart';
 import 'beauty_ability/zego_beauty_editor.dart';
 import 'beauty_ability/zego_beauty_type.dart';
-import 'zego_effects_helper.dart';
 
 extension EffectsServiceExtension on EffectsService {
-  void initBeautyAbilities() {
+  void initBeautyAbilities({
+    required String portraitSegmentationImagePath,
+  }) {
     // Basic
     beautyAbilities[ZegoBeautyType.beautyBasicReset] = ZegoBeautyAbility(
       minValue: 0,
@@ -318,7 +319,8 @@ extension EffectsServiceExtension on EffectsService {
         defaultValue: 50,
         type: ZegoBeautyType.backgroundPortraitSegmentation,
         editor: ZegoPortraitSegmentationEditor(
-            EffectsHelper.portraitSegmentationImagePath),
+          path: portraitSegmentationImagePath,
+        ),
       ),
       ZegoBeautyType.backgroundMosaicing: ZegoBeautyAbility(
         minValue: 0,
@@ -343,7 +345,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoFilterEditor(type.path(resourcesFolder)),
+      editor: ZegoFilterEditor(name: type.name),
     );
   }
 
@@ -353,7 +355,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoLipstickEditor(type.path(resourcesFolder)),
+      editor: ZegoLipstickEditor(name: type.name),
     );
   }
 
@@ -363,7 +365,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoBlusherMakeupEditor(type.path(resourcesFolder)),
+      editor: ZegoBlusherMakeupEditor(name: type.name),
     );
   }
 
@@ -373,7 +375,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoEyelashesEditor(type.path(resourcesFolder)),
+      editor: ZegoEyelashesEditor(name: type.name),
     );
   }
 
@@ -383,7 +385,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoEyelinerEditor(type.path(resourcesFolder)),
+      editor: ZegoEyelinerEditor(name: type.name),
     );
   }
 
@@ -393,7 +395,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoEyeshadowEditor(type.path(resourcesFolder)),
+      editor: ZegoEyeshadowEditor(name: type.name),
     );
   }
 
@@ -403,7 +405,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoColoredContactsEditor(type.path(resourcesFolder)),
+      editor: ZegoColoredContactsEditor(name: type.name),
     );
   }
 
@@ -413,7 +415,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoStyleMakeupEditor(type.path(resourcesFolder)),
+      editor: ZegoStyleMakeupEditor(name: type.name),
     );
   }
 
@@ -423,7 +425,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoStickerEditor(type.path(resourcesFolder)),
+      editor: ZegoStickerEditor(name: type.name),
     );
   }
 }
