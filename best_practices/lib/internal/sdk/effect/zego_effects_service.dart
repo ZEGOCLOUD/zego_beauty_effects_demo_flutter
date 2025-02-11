@@ -1,12 +1,13 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:zego_effects_plugin/zego_effects_plugin.dart';
 
+import '../../../zego_sdk_manager.dart';
 import 'internal/beauty_ability/zego_beauty_ability.dart';
 import 'internal/beauty_ability/zego_beauty_type.dart';
-import 'internal/zego_effects_helper.dart';
 import 'internal/zego_effects_service_extension.dart';
 
 class EffectsService {
@@ -22,53 +23,49 @@ class EffectsService {
   final backendApiUrl =
       'https://aieffects-api.zego.im?Action=DescribeEffectsLicense';
 
-  String resourcesFolder = '';
-
   final beautyAbilities = <ZegoBeautyType, ZegoBeautyAbility>{};
 
   Future<void> init(int appID, String appSign) async {
     this.appID = appID;
     this.appSign = appSign;
 
-    ZegoEffectsPlugin.instance.getAuthInfo(appSign).then((authInfo) {
-      EffectsHelper.getLicence(backendApiUrl, appID, authInfo).then((license) {
-        initEffects(license);
-      });
-    });
+    initEffects(appID, appSign);
   }
 
   Future<void> unInit() async {
     await ZegoEffectsPlugin.instance.destroy();
   }
 
-  Future<void> initEffects(String license) async {
-    await EffectsHelper.setResources();
-    resourcesFolder = EffectsHelper.resourcesFolder;
+//
+  Future<void> initEffects(int appID, String appSign) async {
+    await ZegoEffectsPlugin.instance.setResources();
 
-    final createRet = await ZegoEffectsPlugin.instance.create(license);
+    final resourcesFolder =
+        await ZEGOSDKManager().effectsService.getResourcePath();
+    final portraitSegmentationImagePath =
+        '$resourcesFolder/Backgrounds.bundle/animal.jpg';
+
+    final createRet = await ZegoEffectsPlugin.instance.create(appID, appSign);
     debugPrint('ZegoEffectsPlugin create result: $createRet');
 
-    final initEnvRet =
-        await ZegoEffectsPlugin.instance.initEnv(const Size(720, 1280));
-    debugPrint('ZegoEffectsPlugin init env result: $initEnvRet');
-
-    await enableCustomVideoProcessing();
+    await ZegoEffectsPlugin.instance.enableImageProcessing(true);
 
     // callback of effects sdk.
-    ZegoEffectsPlugin.registerEventCallback(
+    await ZegoEffectsPlugin.registerEventCallback(
       onEffectsError: onEffectsError,
       onEffectsFaceDetected: onEffectsFaceDetected,
     );
 
-    initBeautyAbilities();
+    initBeautyAbilities(
+      portraitSegmentationImagePath: portraitSegmentationImagePath,
+    );
 
-    ZegoEffectsPlugin.instance.enableFaceDetection(true);
+    await ZegoEffectsPlugin.instance.enableFaceDetection(true);
   }
 
   void onEffectsError(int errorCode, String desc) {
     debugPrint('effects errorCode: $errorCode, desc: $desc');
     if (errorCode == 5000002) {
-      EffectsHelper.inValidLicense();
       init(appID, appSign);
     }
   }
@@ -78,13 +75,15 @@ class EffectsService {
         'onEffectsFaceDetected, score: $score, point: $point, size: $size');
   }
 
-  Future<void> enableCustomVideoProcessing() async {
-    await methodChannel.invokeMethod('enableCustomVideoProcessing');
-  }
+  Future<String> getResourcePath() async {
+    var resourceFolder = await ZegoEffectsPlugin.instance.getResourcesFolder();
 
-  Future<String?> getResourcesFolder() async {
-    final folder =
-        await methodChannel.invokeMethod<String>('getResourcesFolder');
-    return folder;
+    //iOS bundle directly into the app, there is no Resources layer. Here is a special treatment.
+    if (Platform.isAndroid) {
+      return '$resourceFolder/Resources';
+    } else if (Platform.isIOS) {
+      return resourceFolder;
+    }
+    return '';
   }
 }

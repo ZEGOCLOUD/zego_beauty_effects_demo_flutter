@@ -22,7 +22,6 @@ class ZEGOSDKManager {
   Future<void> init(int appID, String? appSign, {ZegoScenario scenario = ZegoScenario.Default}) async {
     await expressService.init(appID: appID, appSign: appSign);
     await zimService.init(appID: appID, appSign: appSign);
-    await effectsService.init(appID, appSign ?? '');
 
     this.appID = appID;
     this.appSign = appSign ?? '';
