@@ -9,9 +9,6 @@ import Flutter
   ) -> Bool {
     GeneratedPluginRegistrant.register(with: self)
 
-    // Add this code.
-    ZegoBeautyPlugin.register(with: registrar(forPlugin: "ZegoBeautyPlugin")!)
-
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 }
