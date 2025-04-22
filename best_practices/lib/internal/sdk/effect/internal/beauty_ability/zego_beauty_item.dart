@@ -32,7 +32,6 @@ enum ZegoEffectModelType {
   eyeshadow,
   coloredContacts,
   style,
-  sticker,
   background,
 }
 

@@ -93,17 +93,6 @@ enum ZegoBeautyType {
   filterDreamyCozily,
   filterDreamySweet,
 
-  // Stickers
-  stickerAnimal,
-  stickerDive,
-  stickerCat,
-  stickerWatermelon,
-  stickerDeer,
-  stickerCoolGirl,
-  stickerClown,
-  stickerClawMachine,
-  stickerSailorMoon,
-
   // Background
   // backgroundGreenScreenSegmentation,
   backgroundPortraitSegmentation,
@@ -121,7 +110,6 @@ enum ZegoBeautyType {
   beautyMakeupColoredContactsReset,
   beautyStyleMakeupReset,
   filterReset,
-  stickerReset,
   backgroundReset,
 }
 

@@ -69,9 +69,7 @@ class _ZegoBeautyEffectSheetState extends State<ZegoBeautyEffectSheet> {
       valueListenable: selectedEffectTypeNotifier,
       builder: (context, type, child) {
         if (type == null ||
-            type == ZegoBeautyType.backgroundPortraitSegmentation ||
-            (ZegoBeautyType.stickerAnimal.index <= type.index &&
-                type.index <= ZegoBeautyType.stickerSailorMoon.index)) {
+            type == ZegoBeautyType.backgroundPortraitSegmentation) {
           return Container(height: _besSliderHeight + _besSliderPadding);
         } else if (type.index >= ZegoBeautyType.beautyBasicReset.index) {
           // reset to default value.
@@ -212,9 +210,8 @@ class _ZegoBeautyEffectSheetState extends State<ZegoBeautyEffectSheet> {
     if (type == null) return;
 
     // update select type
-    // when enable style makeup, all makeups(lipstick, blusher...) and sticker effects will be invalid.
+    // when enable style makeup, all makeups(lipstick, blusher...) will be invalid.
     // when enable makeup(lipstick, blusher...), style makeup will be invalid.
-    // when enable sticker, style makeup will be invalid.
     final modelType = selectedModelNotifier.value.type;
     modelSelectedTypeMap[modelType] = type;
     if (modelType == ZegoEffectModelType.style) {
@@ -224,12 +221,9 @@ class _ZegoBeautyEffectSheetState extends State<ZegoBeautyEffectSheet> {
         ..remove(ZegoEffectModelType.eyelash)
         ..remove(ZegoEffectModelType.eyeliner)
         ..remove(ZegoEffectModelType.eyeshadow)
-        ..remove(ZegoEffectModelType.coloredContacts)
-        ..remove(ZegoEffectModelType.sticker);
+        ..remove(ZegoEffectModelType.coloredContacts);
     } else if (modelType.index >= ZegoEffectModelType.lipstick.index ||
         modelType.index <= ZegoEffectModelType.coloredContacts.index) {
-      modelSelectedTypeMap.remove(ZegoEffectModelType.style);
-    } else if (modelType == ZegoEffectModelType.sticker) {
       modelSelectedTypeMap.remove(ZegoEffectModelType.style);
     }
   }

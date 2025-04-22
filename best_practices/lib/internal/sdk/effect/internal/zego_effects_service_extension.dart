@@ -288,23 +288,6 @@ extension EffectsServiceExtension on EffectsService {
       ZegoBeautyType.beautyStyleMakeupFlawless:
           _styleAbility(ZegoBeautyType.beautyStyleMakeupFlawless),
 
-      // Stickers
-      ZegoBeautyType.stickerReset: _stickerAbility(ZegoBeautyType.stickerReset),
-      ZegoBeautyType.stickerAnimal:
-          _stickerAbility(ZegoBeautyType.stickerAnimal),
-      ZegoBeautyType.stickerDive: _stickerAbility(ZegoBeautyType.stickerDive),
-      ZegoBeautyType.stickerCat: _stickerAbility(ZegoBeautyType.stickerCat),
-      ZegoBeautyType.stickerWatermelon:
-          _stickerAbility(ZegoBeautyType.stickerWatermelon),
-      ZegoBeautyType.stickerDeer: _stickerAbility(ZegoBeautyType.stickerDeer),
-      ZegoBeautyType.stickerCoolGirl:
-          _stickerAbility(ZegoBeautyType.stickerCoolGirl),
-      ZegoBeautyType.stickerClown: _stickerAbility(ZegoBeautyType.stickerClown),
-      ZegoBeautyType.stickerClawMachine:
-          _stickerAbility(ZegoBeautyType.stickerClawMachine),
-      ZegoBeautyType.stickerSailorMoon:
-          _stickerAbility(ZegoBeautyType.stickerSailorMoon),
-
       // Background
       ZegoBeautyType.backgroundReset: ZegoBeautyAbility(
         minValue: 0,

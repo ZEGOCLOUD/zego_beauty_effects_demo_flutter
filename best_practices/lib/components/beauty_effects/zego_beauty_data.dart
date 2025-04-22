@@ -16,7 +16,6 @@ class ZegoBeautyData {
         eyeshadowModel,
         coloredContactsModel,
         styleMakeupModel,
-        stickersModel,
         backgroundModel,
       ];
 
@@ -252,32 +251,6 @@ class ZegoBeautyData {
     }).toList(),
   );
 
-  static ZegoEffectModel stickersModel = ZegoEffectModel(
-    title: 'Stickers',
-    type: ZegoEffectModelType.sticker,
-    items: [
-      ZegoBeautyType.stickerReset,
-      ZegoBeautyType.stickerAnimal,
-      ZegoBeautyType.stickerDive,
-      ZegoBeautyType.stickerCat,
-      ZegoBeautyType.stickerWatermelon,
-      ZegoBeautyType.stickerDeer,
-      ZegoBeautyType.stickerCoolGirl,
-      ZegoBeautyType.stickerClown,
-      ZegoBeautyType.stickerClawMachine,
-      ZegoBeautyType.stickerSailorMoon,
-    ].map((type) {
-      return ZegoEffectItem(
-        type: type,
-        icon: icon(type),
-        selectIcon: selectedIcon(type),
-        iconText: beautyItemText(type),
-        textStyle: textStyle(type),
-        selectedTextStyle: selectedTextStyle(type),
-      );
-    }).toList(),
-  );
-
   static ZegoEffectModel backgroundModel = ZegoEffectModel(
     title: 'Background',
     type: ZegoEffectModelType.background,
@@ -463,28 +436,6 @@ class ZegoBeautyData {
         return 'Pure Sexy';
       case ZegoBeautyType.beautyStyleMakeupFlawless:
         return 'Flawless';
-
-      // Stickers
-      case ZegoBeautyType.stickerReset:
-        return 'None';
-      case ZegoBeautyType.stickerAnimal:
-        return 'Animal';
-      case ZegoBeautyType.stickerDive:
-        return 'Dive';
-      case ZegoBeautyType.stickerCat:
-        return 'Cat';
-      case ZegoBeautyType.stickerWatermelon:
-        return 'Watermelon';
-      case ZegoBeautyType.stickerDeer:
-        return 'Deer';
-      case ZegoBeautyType.stickerCoolGirl:
-        return 'Cool Girl';
-      case ZegoBeautyType.stickerClown:
-        return 'Clown';
-      case ZegoBeautyType.stickerClawMachine:
-        return 'Claw Machine';
-      case ZegoBeautyType.stickerSailorMoon:
-        return 'Sailor Moon';
 
       // Background
       case ZegoBeautyType.backgroundReset:
