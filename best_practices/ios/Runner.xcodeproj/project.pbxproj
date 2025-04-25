@@ -7,16 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A92DDF9E7091CA8FC488937 /* Pods_RunnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955610A7F962291D1E17C3AA /* Pods_RunnerTests.framework */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		331C808B294A63AB00263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C807B294A618700263BE5 /* RunnerTests.swift */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
-		410208D22D59E76C00FBAFBE /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 410208D12D59E76C00FBAFBE /* Resources */; };
+		41C20DED2D6C7EEB0030CD66 /* FaceDetectionModel.model in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DA42D6C7EEB0030CD66 /* FaceDetectionModel.model */; };
+		41C20DEE2D6C7EEB0030CD66 /* SegmentationModel.model in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DA52D6C7EEB0030CD66 /* SegmentationModel.model */; };
+		41C20DEF2D6C7EEB0030CD66 /* Autumn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DA72D6C7EEB0030CD66 /* Autumn.bundle */; };
+		41C20DF02D6C7EEB0030CD66 /* Brighten.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DA82D6C7EEB0030CD66 /* Brighten.bundle */; };
+		41C20DF12D6C7EEB0030CD66 /* Cool.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DA92D6C7EEB0030CD66 /* Cool.bundle */; };
+		41C20DF22D6C7EEB0030CD66 /* Cozily.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DAA2D6C7EEB0030CD66 /* Cozily.bundle */; };
+		41C20DF32D6C7EEB0030CD66 /* Creamy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DAB2D6C7EEB0030CD66 /* Creamy.bundle */; };
+		41C20DF42D6C7EEB0030CD66 /* Film-like.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DAC2D6C7EEB0030CD66 /* Film-like.bundle */; };
+		41C20DF52D6C7EEB0030CD66 /* Fresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DAD2D6C7EEB0030CD66 /* Fresh.bundle */; };
+		41C20DF62D6C7EEB0030CD66 /* Night.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DAE2D6C7EEB0030CD66 /* Night.bundle */; };
+		41C20DF72D6C7EEB0030CD66 /* Sunset.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DAF2D6C7EEB0030CD66 /* Sunset.bundle */; };
+		41C20DF82D6C7EEB0030CD66 /* Sweet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DB02D6C7EEB0030CD66 /* Sweet.bundle */; };
+		41C20DF92D6C7EEB0030CD66 /* blusherdir_apricot_pink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DB22D6C7EEB0030CD66 /* blusherdir_apricot_pink.bundle */; };
+		41C20DFA2D6C7EEB0030CD66 /* blusherdir_milk_orange.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DB32D6C7EEB0030CD66 /* blusherdir_milk_orange.bundle */; };
+		41C20DFB2D6C7EEB0030CD66 /* blusherdir_peach.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DB42D6C7EEB0030CD66 /* blusherdir_peach.bundle */; };
+		41C20DFC2D6C7EEB0030CD66 /* blusherdir_slightly_drunk.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DB52D6C7EEB0030CD66 /* blusherdir_slightly_drunk.bundle */; };
+		41C20DFD2D6C7EEB0030CD66 /* blusherdir_sweet_orange.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DB62D6C7EEB0030CD66 /* blusherdir_sweet_orange.bundle */; };
+		41C20DFE2D6C7EEB0030CD66 /* coloredcontactsdir_chocolate_brown.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DB82D6C7EEB0030CD66 /* coloredcontactsdir_chocolate_brown.bundle */; };
+		41C20DFF2D6C7EEB0030CD66 /* coloredcontactsdir_darknight_black.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DB92D6C7EEB0030CD66 /* coloredcontactsdir_darknight_black.bundle */; };
+		41C20E002D6C7EEB0030CD66 /* coloredcontactsdir_mystery_brown_green.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DBA2D6C7EEB0030CD66 /* coloredcontactsdir_mystery_brown_green.bundle */; };
+		41C20E012D6C7EEB0030CD66 /* coloredcontactsdir_polar_lights_brown.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DBB2D6C7EEB0030CD66 /* coloredcontactsdir_polar_lights_brown.bundle */; };
+		41C20E022D6C7EEB0030CD66 /* coloredcontactsdir_starry_blue.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DBC2D6C7EEB0030CD66 /* coloredcontactsdir_starry_blue.bundle */; };
+		41C20E032D6C7EEB0030CD66 /* eyelashesdir_bushy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DBE2D6C7EEB0030CD66 /* eyelashesdir_bushy.bundle */; };
+		41C20E042D6C7EEB0030CD66 /* eyelashesdir_curl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DBF2D6C7EEB0030CD66 /* eyelashesdir_curl.bundle */; };
+		41C20E052D6C7EEB0030CD66 /* eyelashesdir_natural.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DC02D6C7EEB0030CD66 /* eyelashesdir_natural.bundle */; };
+		41C20E062D6C7EEB0030CD66 /* eyelashesdir_slender.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DC12D6C7EEB0030CD66 /* eyelashesdir_slender.bundle */; };
+		41C20E072D6C7EEB0030CD66 /* eyelashesdir_tender.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DC22D6C7EEB0030CD66 /* eyelashesdir_tender.bundle */; };
+		41C20E082D6C7EEB0030CD66 /* eyelinerdir_natural.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DC42D6C7EEB0030CD66 /* eyelinerdir_natural.bundle */; };
+		41C20E092D6C7EEB0030CD66 /* eyelinerdir_pretty.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DC52D6C7EEB0030CD66 /* eyelinerdir_pretty.bundle */; };
+		41C20E0A2D6C7EEB0030CD66 /* eyelinerdir_scheming.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DC62D6C7EEB0030CD66 /* eyelinerdir_scheming.bundle */; };
+		41C20E0B2D6C7EEB0030CD66 /* eyelinerdir_temperament.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DC72D6C7EEB0030CD66 /* eyelinerdir_temperament.bundle */; };
+		41C20E0C2D6C7EEB0030CD66 /* eyelinerdir_wildcat.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DC82D6C7EEB0030CD66 /* eyelinerdir_wildcat.bundle */; };
+		41C20E0D2D6C7EEB0030CD66 /* eyeshadowdir_mist_pink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DCA2D6C7EEB0030CD66 /* eyeshadowdir_mist_pink.bundle */; };
+		41C20E0E2D6C7EEB0030CD66 /* eyeshadowdir_mocha_brown.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DCB2D6C7EEB0030CD66 /* eyeshadowdir_mocha_brown.bundle */; };
+		41C20E0F2D6C7EEB0030CD66 /* eyeshadowdir_shimmer_pink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DCC2D6C7EEB0030CD66 /* eyeshadowdir_shimmer_pink.bundle */; };
+		41C20E102D6C7EEB0030CD66 /* eyeshadowdir_tea_brown.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DCD2D6C7EEB0030CD66 /* eyeshadowdir_tea_brown.bundle */; };
+		41C20E112D6C7EEB0030CD66 /* eyeshadowdir_vitality_orange.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DCE2D6C7EEB0030CD66 /* eyeshadowdir_vitality_orange.bundle */; };
+		41C20E122D6C7EEB0030CD66 /* lipstickdir_bean_paste_pink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DD02D6C7EEB0030CD66 /* lipstickdir_bean_paste_pink.bundle */; };
+		41C20E132D6C7EEB0030CD66 /* lipstickdir_coral.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DD12D6C7EEB0030CD66 /* lipstickdir_coral.bundle */; };
+		41C20E142D6C7EEB0030CD66 /* lipstickdir_rust_red.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DD22D6C7EEB0030CD66 /* lipstickdir_rust_red.bundle */; };
+		41C20E152D6C7EEB0030CD66 /* lipstickdir_sweet_orange.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DD32D6C7EEB0030CD66 /* lipstickdir_sweet_orange.bundle */; };
+		41C20E162D6C7EEB0030CD66 /* lipstickdir_velvet_red.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DD42D6C7EEB0030CD66 /* lipstickdir_velvet_red.bundle */; };
+		41C20E172D6C7EEB0030CD66 /* makeupdir_cutie_and_cool.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DD62D6C7EEB0030CD66 /* makeupdir_cutie_and_cool.bundle */; };
+		41C20E182D6C7EEB0030CD66 /* makeupdir_flawless.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DD72D6C7EEB0030CD66 /* makeupdir_flawless.bundle */; };
+		41C20E192D6C7EEB0030CD66 /* makeupdir_milky_eyes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DD82D6C7EEB0030CD66 /* makeupdir_milky_eyes.bundle */; };
+		41C20E1A2D6C7EEB0030CD66 /* makeupdir_pure_and_sexy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DD92D6C7EEB0030CD66 /* makeupdir_pure_and_sexy.bundle */; };
+		41C20E1B2D6C7EEB0030CD66 /* makeupdir_vulnerable_and_innocenteyes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DDA2D6C7EEB0030CD66 /* makeupdir_vulnerable_and_innocenteyes.bundle */; };
+		41C20E1C2D6C7EEB0030CD66 /* fenbai.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DDD2D6C7EEB0030CD66 /* fenbai.bundle */; };
+		41C20E1D2D6C7EEB0030CD66 /* lengbai.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DDE2D6C7EEB0030CD66 /* lengbai.bundle */; };
+		41C20E1E2D6C7EEB0030CD66 /* meihei.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DDF2D6C7EEB0030CD66 /* meihei.bundle */; };
+		41C20E1F2D6C7EEB0030CD66 /* nuanbai.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DE02D6C7EEB0030CD66 /* nuanbai.bundle */; };
+		41C20E202D6C7EEB0030CD66 /* xiaomai.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DE12D6C7EEB0030CD66 /* xiaomai.bundle */; };
+		41C20E222D6C7EEB0030CD66 /* ClarityResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DE42D6C7EEB0030CD66 /* ClarityResources.bundle */; };
+		41C20E232D6C7EEB0030CD66 /* CommonResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DE52D6C7EEB0030CD66 /* CommonResources.bundle */; };
+		41C20E242D6C7EEB0030CD66 /* FaceWhiteningResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DE62D6C7EEB0030CD66 /* FaceWhiteningResources.bundle */; };
+		41C20E252D6C7EEB0030CD66 /* PendantResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DE72D6C7EEB0030CD66 /* PendantResources.bundle */; };
+		41C20E262D6C7EEB0030CD66 /* RosyResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DE82D6C7EEB0030CD66 /* RosyResources.bundle */; };
+		41C20E272D6C7EEB0030CD66 /* TeethWhiteningResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20DE92D6C7EEB0030CD66 /* TeethWhiteningResources.bundle */; };
+		41C20E292D6C83BA0030CD66 /* Backgrounds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41C20E282D6C83B90030CD66 /* Backgrounds.bundle */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
+		87CDFB618BA5603B34B00105 /* Pods_RunnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB8772719670E9297FA861F /* Pods_RunnerTests.framework */; };
+		8D730F90B718CEAC42E43B2E /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CBE246BA640E04BBB69009 /* Pods_Runner.framework */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
-		E2CAEA6F9693141436148CDA /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EBF0B42007A83BB27E525F /* Pods_Runner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,21 +101,77 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		03705318A6977FD43E49EFE8 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
+		1F585F370D25FDB117CDB589 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		331C807B294A618700263BE5 /* RunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
 		331C8081294A63A400263BE5 /* RunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AEDB28DEE688527FCDBC70F /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
-		410208D12D59E76C00FBAFBE /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
-		411C9DCF865D6A724B7BD86C /* Pods-RunnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release.xcconfig"; sourceTree = "<group>"; };
-		59A117700EDC22D549A9CB3C /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
-		72EBF0B42007A83BB27E525F /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C20DA42D6C7EEB0030CD66 /* FaceDetectionModel.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = FaceDetectionModel.model; sourceTree = "<group>"; };
+		41C20DA52D6C7EEB0030CD66 /* SegmentationModel.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = SegmentationModel.model; sourceTree = "<group>"; };
+		41C20DA72D6C7EEB0030CD66 /* Autumn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Autumn.bundle; sourceTree = "<group>"; };
+		41C20DA82D6C7EEB0030CD66 /* Brighten.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Brighten.bundle; sourceTree = "<group>"; };
+		41C20DA92D6C7EEB0030CD66 /* Cool.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Cool.bundle; sourceTree = "<group>"; };
+		41C20DAA2D6C7EEB0030CD66 /* Cozily.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Cozily.bundle; sourceTree = "<group>"; };
+		41C20DAB2D6C7EEB0030CD66 /* Creamy.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Creamy.bundle; sourceTree = "<group>"; };
+		41C20DAC2D6C7EEB0030CD66 /* Film-like.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Film-like.bundle"; sourceTree = "<group>"; };
+		41C20DAD2D6C7EEB0030CD66 /* Fresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Fresh.bundle; sourceTree = "<group>"; };
+		41C20DAE2D6C7EEB0030CD66 /* Night.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Night.bundle; sourceTree = "<group>"; };
+		41C20DAF2D6C7EEB0030CD66 /* Sunset.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Sunset.bundle; sourceTree = "<group>"; };
+		41C20DB02D6C7EEB0030CD66 /* Sweet.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Sweet.bundle; sourceTree = "<group>"; };
+		41C20DB22D6C7EEB0030CD66 /* blusherdir_apricot_pink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = blusherdir_apricot_pink.bundle; sourceTree = "<group>"; };
+		41C20DB32D6C7EEB0030CD66 /* blusherdir_milk_orange.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = blusherdir_milk_orange.bundle; sourceTree = "<group>"; };
+		41C20DB42D6C7EEB0030CD66 /* blusherdir_peach.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = blusherdir_peach.bundle; sourceTree = "<group>"; };
+		41C20DB52D6C7EEB0030CD66 /* blusherdir_slightly_drunk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = blusherdir_slightly_drunk.bundle; sourceTree = "<group>"; };
+		41C20DB62D6C7EEB0030CD66 /* blusherdir_sweet_orange.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = blusherdir_sweet_orange.bundle; sourceTree = "<group>"; };
+		41C20DB82D6C7EEB0030CD66 /* coloredcontactsdir_chocolate_brown.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = coloredcontactsdir_chocolate_brown.bundle; sourceTree = "<group>"; };
+		41C20DB92D6C7EEB0030CD66 /* coloredcontactsdir_darknight_black.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = coloredcontactsdir_darknight_black.bundle; sourceTree = "<group>"; };
+		41C20DBA2D6C7EEB0030CD66 /* coloredcontactsdir_mystery_brown_green.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = coloredcontactsdir_mystery_brown_green.bundle; sourceTree = "<group>"; };
+		41C20DBB2D6C7EEB0030CD66 /* coloredcontactsdir_polar_lights_brown.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = coloredcontactsdir_polar_lights_brown.bundle; sourceTree = "<group>"; };
+		41C20DBC2D6C7EEB0030CD66 /* coloredcontactsdir_starry_blue.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = coloredcontactsdir_starry_blue.bundle; sourceTree = "<group>"; };
+		41C20DBE2D6C7EEB0030CD66 /* eyelashesdir_bushy.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelashesdir_bushy.bundle; sourceTree = "<group>"; };
+		41C20DBF2D6C7EEB0030CD66 /* eyelashesdir_curl.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelashesdir_curl.bundle; sourceTree = "<group>"; };
+		41C20DC02D6C7EEB0030CD66 /* eyelashesdir_natural.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelashesdir_natural.bundle; sourceTree = "<group>"; };
+		41C20DC12D6C7EEB0030CD66 /* eyelashesdir_slender.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelashesdir_slender.bundle; sourceTree = "<group>"; };
+		41C20DC22D6C7EEB0030CD66 /* eyelashesdir_tender.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelashesdir_tender.bundle; sourceTree = "<group>"; };
+		41C20DC42D6C7EEB0030CD66 /* eyelinerdir_natural.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelinerdir_natural.bundle; sourceTree = "<group>"; };
+		41C20DC52D6C7EEB0030CD66 /* eyelinerdir_pretty.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelinerdir_pretty.bundle; sourceTree = "<group>"; };
+		41C20DC62D6C7EEB0030CD66 /* eyelinerdir_scheming.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelinerdir_scheming.bundle; sourceTree = "<group>"; };
+		41C20DC72D6C7EEB0030CD66 /* eyelinerdir_temperament.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelinerdir_temperament.bundle; sourceTree = "<group>"; };
+		41C20DC82D6C7EEB0030CD66 /* eyelinerdir_wildcat.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelinerdir_wildcat.bundle; sourceTree = "<group>"; };
+		41C20DCA2D6C7EEB0030CD66 /* eyeshadowdir_mist_pink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyeshadowdir_mist_pink.bundle; sourceTree = "<group>"; };
+		41C20DCB2D6C7EEB0030CD66 /* eyeshadowdir_mocha_brown.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyeshadowdir_mocha_brown.bundle; sourceTree = "<group>"; };
+		41C20DCC2D6C7EEB0030CD66 /* eyeshadowdir_shimmer_pink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyeshadowdir_shimmer_pink.bundle; sourceTree = "<group>"; };
+		41C20DCD2D6C7EEB0030CD66 /* eyeshadowdir_tea_brown.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyeshadowdir_tea_brown.bundle; sourceTree = "<group>"; };
+		41C20DCE2D6C7EEB0030CD66 /* eyeshadowdir_vitality_orange.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyeshadowdir_vitality_orange.bundle; sourceTree = "<group>"; };
+		41C20DD02D6C7EEB0030CD66 /* lipstickdir_bean_paste_pink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = lipstickdir_bean_paste_pink.bundle; sourceTree = "<group>"; };
+		41C20DD12D6C7EEB0030CD66 /* lipstickdir_coral.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = lipstickdir_coral.bundle; sourceTree = "<group>"; };
+		41C20DD22D6C7EEB0030CD66 /* lipstickdir_rust_red.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = lipstickdir_rust_red.bundle; sourceTree = "<group>"; };
+		41C20DD32D6C7EEB0030CD66 /* lipstickdir_sweet_orange.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = lipstickdir_sweet_orange.bundle; sourceTree = "<group>"; };
+		41C20DD42D6C7EEB0030CD66 /* lipstickdir_velvet_red.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = lipstickdir_velvet_red.bundle; sourceTree = "<group>"; };
+		41C20DD62D6C7EEB0030CD66 /* makeupdir_cutie_and_cool.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = makeupdir_cutie_and_cool.bundle; sourceTree = "<group>"; };
+		41C20DD72D6C7EEB0030CD66 /* makeupdir_flawless.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = makeupdir_flawless.bundle; sourceTree = "<group>"; };
+		41C20DD82D6C7EEB0030CD66 /* makeupdir_milky_eyes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = makeupdir_milky_eyes.bundle; sourceTree = "<group>"; };
+		41C20DD92D6C7EEB0030CD66 /* makeupdir_pure_and_sexy.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = makeupdir_pure_and_sexy.bundle; sourceTree = "<group>"; };
+		41C20DDA2D6C7EEB0030CD66 /* makeupdir_vulnerable_and_innocenteyes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = makeupdir_vulnerable_and_innocenteyes.bundle; sourceTree = "<group>"; };
+		41C20DDD2D6C7EEB0030CD66 /* fenbai.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = fenbai.bundle; sourceTree = "<group>"; };
+		41C20DDE2D6C7EEB0030CD66 /* lengbai.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = lengbai.bundle; sourceTree = "<group>"; };
+		41C20DDF2D6C7EEB0030CD66 /* meihei.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = meihei.bundle; sourceTree = "<group>"; };
+		41C20DE02D6C7EEB0030CD66 /* nuanbai.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = nuanbai.bundle; sourceTree = "<group>"; };
+		41C20DE12D6C7EEB0030CD66 /* xiaomai.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = xiaomai.bundle; sourceTree = "<group>"; };
+		41C20DE42D6C7EEB0030CD66 /* ClarityResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ClarityResources.bundle; sourceTree = "<group>"; };
+		41C20DE52D6C7EEB0030CD66 /* CommonResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CommonResources.bundle; sourceTree = "<group>"; };
+		41C20DE62D6C7EEB0030CD66 /* FaceWhiteningResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FaceWhiteningResources.bundle; sourceTree = "<group>"; };
+		41C20DE72D6C7EEB0030CD66 /* PendantResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PendantResources.bundle; sourceTree = "<group>"; };
+		41C20DE82D6C7EEB0030CD66 /* RosyResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RosyResources.bundle; sourceTree = "<group>"; };
+		41C20DE92D6C7EEB0030CD66 /* TeethWhiteningResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TeethWhiteningResources.bundle; sourceTree = "<group>"; };
+		41C20E282D6C83B90030CD66 /* Backgrounds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Backgrounds.bundle; path = Runner/Resources/Resources/Backgrounds.bundle; sourceTree = SOURCE_ROOT; };
+		4AEAE25E940DAAD7628FA370 /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
+		6EA3BEAFECF313D4741540B0 /* Pods-RunnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73D1BC4A02C51A9330C71F41 /* Pods-RunnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release.xcconfig"; sourceTree = "<group>"; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
 		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
-		955610A7F962291D1E17C3AA /* Pods_RunnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
 		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
 		97C146EE1CF9000F007C117D /* Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +179,10 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B82E747D8E1344C5F11FA1DB /* Pods-RunnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EADA555A031F9FC8B448AA08 /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
+		B7CBE246BA640E04BBB69009 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA8B83660235CFC0C139F15F /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		EEF1A076D726F43E5D0237AF /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		FEB8772719670E9297FA861F /* Pods_RunnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,15 +190,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2CAEA6F9693141436148CDA /* Pods_Runner.framework in Frameworks */,
+				8D730F90B718CEAC42E43B2E /* Pods_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDEFCE6AEC1BA922D2B0E65F /* Frameworks */ = {
+		CA2D3F39B8E9388440857317 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A92DDF9E7091CA8FC488937 /* Pods_RunnerTests.framework in Frameworks */,
+				87CDFB618BA5603B34B00105 /* Pods_RunnerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,24 +213,177 @@
 			path = RunnerTests;
 			sourceTree = "<group>";
 		};
-		3B57B07FCB412F193D3165F1 /* Frameworks */ = {
+		41C20DA62D6C7EEB0030CD66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				72EBF0B42007A83BB27E525F /* Pods_Runner.framework */,
-				955610A7F962291D1E17C3AA /* Pods_RunnerTests.framework */,
+				41C20DA42D6C7EEB0030CD66 /* FaceDetectionModel.model */,
+				41C20DA52D6C7EEB0030CD66 /* SegmentationModel.model */,
 			);
-			name = Frameworks;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		3E5E397CC75E2D8F25AF5899 /* Pods */ = {
+		41C20DB12D6C7EEB0030CD66 /* ColorfulStyleResources */ = {
 			isa = PBXGroup;
 			children = (
-				3AEDB28DEE688527FCDBC70F /* Pods-Runner.debug.xcconfig */,
-				59A117700EDC22D549A9CB3C /* Pods-Runner.release.xcconfig */,
-				03705318A6977FD43E49EFE8 /* Pods-Runner.profile.xcconfig */,
-				B82E747D8E1344C5F11FA1DB /* Pods-RunnerTests.debug.xcconfig */,
-				411C9DCF865D6A724B7BD86C /* Pods-RunnerTests.release.xcconfig */,
-				EADA555A031F9FC8B448AA08 /* Pods-RunnerTests.profile.xcconfig */,
+				41C20DA72D6C7EEB0030CD66 /* Autumn.bundle */,
+				41C20DA82D6C7EEB0030CD66 /* Brighten.bundle */,
+				41C20DA92D6C7EEB0030CD66 /* Cool.bundle */,
+				41C20DAA2D6C7EEB0030CD66 /* Cozily.bundle */,
+				41C20DAB2D6C7EEB0030CD66 /* Creamy.bundle */,
+				41C20DAC2D6C7EEB0030CD66 /* Film-like.bundle */,
+				41C20DAD2D6C7EEB0030CD66 /* Fresh.bundle */,
+				41C20DAE2D6C7EEB0030CD66 /* Night.bundle */,
+				41C20DAF2D6C7EEB0030CD66 /* Sunset.bundle */,
+				41C20DB02D6C7EEB0030CD66 /* Sweet.bundle */,
+			);
+			path = ColorfulStyleResources;
+			sourceTree = "<group>";
+		};
+		41C20DB72D6C7EEB0030CD66 /* blusherdir */ = {
+			isa = PBXGroup;
+			children = (
+				41C20DB22D6C7EEB0030CD66 /* blusherdir_apricot_pink.bundle */,
+				41C20DB32D6C7EEB0030CD66 /* blusherdir_milk_orange.bundle */,
+				41C20DB42D6C7EEB0030CD66 /* blusherdir_peach.bundle */,
+				41C20DB52D6C7EEB0030CD66 /* blusherdir_slightly_drunk.bundle */,
+				41C20DB62D6C7EEB0030CD66 /* blusherdir_sweet_orange.bundle */,
+			);
+			path = blusherdir;
+			sourceTree = "<group>";
+		};
+		41C20DBD2D6C7EEB0030CD66 /* coloredcontactsdir */ = {
+			isa = PBXGroup;
+			children = (
+				41C20DB82D6C7EEB0030CD66 /* coloredcontactsdir_chocolate_brown.bundle */,
+				41C20DB92D6C7EEB0030CD66 /* coloredcontactsdir_darknight_black.bundle */,
+				41C20DBA2D6C7EEB0030CD66 /* coloredcontactsdir_mystery_brown_green.bundle */,
+				41C20DBB2D6C7EEB0030CD66 /* coloredcontactsdir_polar_lights_brown.bundle */,
+				41C20DBC2D6C7EEB0030CD66 /* coloredcontactsdir_starry_blue.bundle */,
+			);
+			path = coloredcontactsdir;
+			sourceTree = "<group>";
+		};
+		41C20DC32D6C7EEB0030CD66 /* eyelashesdir */ = {
+			isa = PBXGroup;
+			children = (
+				41C20DBE2D6C7EEB0030CD66 /* eyelashesdir_bushy.bundle */,
+				41C20DBF2D6C7EEB0030CD66 /* eyelashesdir_curl.bundle */,
+				41C20DC02D6C7EEB0030CD66 /* eyelashesdir_natural.bundle */,
+				41C20DC12D6C7EEB0030CD66 /* eyelashesdir_slender.bundle */,
+				41C20DC22D6C7EEB0030CD66 /* eyelashesdir_tender.bundle */,
+			);
+			path = eyelashesdir;
+			sourceTree = "<group>";
+		};
+		41C20DC92D6C7EEB0030CD66 /* eyelinerdir */ = {
+			isa = PBXGroup;
+			children = (
+				41C20DC42D6C7EEB0030CD66 /* eyelinerdir_natural.bundle */,
+				41C20DC52D6C7EEB0030CD66 /* eyelinerdir_pretty.bundle */,
+				41C20DC62D6C7EEB0030CD66 /* eyelinerdir_scheming.bundle */,
+				41C20DC72D6C7EEB0030CD66 /* eyelinerdir_temperament.bundle */,
+				41C20DC82D6C7EEB0030CD66 /* eyelinerdir_wildcat.bundle */,
+			);
+			path = eyelinerdir;
+			sourceTree = "<group>";
+		};
+		41C20DCF2D6C7EEB0030CD66 /* eyeshadowdir */ = {
+			isa = PBXGroup;
+			children = (
+				41C20DCA2D6C7EEB0030CD66 /* eyeshadowdir_mist_pink.bundle */,
+				41C20DCB2D6C7EEB0030CD66 /* eyeshadowdir_mocha_brown.bundle */,
+				41C20DCC2D6C7EEB0030CD66 /* eyeshadowdir_shimmer_pink.bundle */,
+				41C20DCD2D6C7EEB0030CD66 /* eyeshadowdir_tea_brown.bundle */,
+				41C20DCE2D6C7EEB0030CD66 /* eyeshadowdir_vitality_orange.bundle */,
+			);
+			path = eyeshadowdir;
+			sourceTree = "<group>";
+		};
+		41C20DD52D6C7EEB0030CD66 /* lipstickdir */ = {
+			isa = PBXGroup;
+			children = (
+				41C20DD02D6C7EEB0030CD66 /* lipstickdir_bean_paste_pink.bundle */,
+				41C20DD12D6C7EEB0030CD66 /* lipstickdir_coral.bundle */,
+				41C20DD22D6C7EEB0030CD66 /* lipstickdir_rust_red.bundle */,
+				41C20DD32D6C7EEB0030CD66 /* lipstickdir_sweet_orange.bundle */,
+				41C20DD42D6C7EEB0030CD66 /* lipstickdir_velvet_red.bundle */,
+			);
+			path = lipstickdir;
+			sourceTree = "<group>";
+		};
+		41C20DDB2D6C7EEB0030CD66 /* makeupdir */ = {
+			isa = PBXGroup;
+			children = (
+				41C20DD62D6C7EEB0030CD66 /* makeupdir_cutie_and_cool.bundle */,
+				41C20DD72D6C7EEB0030CD66 /* makeupdir_flawless.bundle */,
+				41C20DD82D6C7EEB0030CD66 /* makeupdir_milky_eyes.bundle */,
+				41C20DD92D6C7EEB0030CD66 /* makeupdir_pure_and_sexy.bundle */,
+				41C20DDA2D6C7EEB0030CD66 /* makeupdir_vulnerable_and_innocenteyes.bundle */,
+			);
+			path = makeupdir;
+			sourceTree = "<group>";
+		};
+		41C20DDC2D6C7EEB0030CD66 /* MakeupResources */ = {
+			isa = PBXGroup;
+			children = (
+				41C20DB72D6C7EEB0030CD66 /* blusherdir */,
+				41C20DBD2D6C7EEB0030CD66 /* coloredcontactsdir */,
+				41C20DC32D6C7EEB0030CD66 /* eyelashesdir */,
+				41C20DC92D6C7EEB0030CD66 /* eyelinerdir */,
+				41C20DCF2D6C7EEB0030CD66 /* eyeshadowdir */,
+				41C20DD52D6C7EEB0030CD66 /* lipstickdir */,
+				41C20DDB2D6C7EEB0030CD66 /* makeupdir */,
+			);
+			path = MakeupResources;
+			sourceTree = "<group>";
+		};
+		41C20DE22D6C7EEB0030CD66 /* SkinColorResources */ = {
+			isa = PBXGroup;
+			children = (
+				41C20DDD2D6C7EEB0030CD66 /* fenbai.bundle */,
+				41C20DDE2D6C7EEB0030CD66 /* lengbai.bundle */,
+				41C20DDF2D6C7EEB0030CD66 /* meihei.bundle */,
+				41C20DE02D6C7EEB0030CD66 /* nuanbai.bundle */,
+				41C20DE12D6C7EEB0030CD66 /* xiaomai.bundle */,
+			);
+			path = SkinColorResources;
+			sourceTree = "<group>";
+		};
+		41C20DEA2D6C7EEB0030CD66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				41C20DB12D6C7EEB0030CD66 /* ColorfulStyleResources */,
+				41C20DDC2D6C7EEB0030CD66 /* MakeupResources */,
+				41C20DE22D6C7EEB0030CD66 /* SkinColorResources */,
+				41C20E282D6C83B90030CD66 /* Backgrounds.bundle */,
+				41C20DE42D6C7EEB0030CD66 /* ClarityResources.bundle */,
+				41C20DE52D6C7EEB0030CD66 /* CommonResources.bundle */,
+				41C20DE62D6C7EEB0030CD66 /* FaceWhiteningResources.bundle */,
+				41C20DE72D6C7EEB0030CD66 /* PendantResources.bundle */,
+				41C20DE82D6C7EEB0030CD66 /* RosyResources.bundle */,
+				41C20DE92D6C7EEB0030CD66 /* TeethWhiteningResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		41C20DEB2D6C7EEB0030CD66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				41C20DA62D6C7EEB0030CD66 /* Models */,
+				41C20DEA2D6C7EEB0030CD66 /* Resources */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4DFFD2AE9D238B2286BB2810 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEF1A076D726F43E5D0237AF /* Pods-Runner.debug.xcconfig */,
+				1F585F370D25FDB117CDB589 /* Pods-Runner.release.xcconfig */,
+				BA8B83660235CFC0C139F15F /* Pods-Runner.profile.xcconfig */,
+				6EA3BEAFECF313D4741540B0 /* Pods-RunnerTests.debug.xcconfig */,
+				73D1BC4A02C51A9330C71F41 /* Pods-RunnerTests.release.xcconfig */,
+				4AEAE25E940DAAD7628FA370 /* Pods-RunnerTests.profile.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -137,8 +406,8 @@
 				97C146F01CF9000F007C117D /* Runner */,
 				97C146EF1CF9000F007C117D /* Products */,
 				331C8082294A63A400263BE5 /* RunnerTests */,
-				3E5E397CC75E2D8F25AF5899 /* Pods */,
-				3B57B07FCB412F193D3165F1 /* Frameworks */,
+				4DFFD2AE9D238B2286BB2810 /* Pods */,
+				AEF8552C86B15EE5A007CD89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,7 +423,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
-				410208D12D59E76C00FBAFBE /* Resources */,
+				41C20DEB2D6C7EEB0030CD66 /* Resources */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -167,6 +436,15 @@
 			path = Runner;
 			sourceTree = "<group>";
 		};
+		AEF8552C86B15EE5A007CD89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7CBE246BA640E04BBB69009 /* Pods_Runner.framework */,
+				FEB8772719670E9297FA861F /* Pods_RunnerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,10 +452,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 331C8087294A63A400263BE5 /* Build configuration list for PBXNativeTarget "RunnerTests" */;
 			buildPhases = (
-				08494CEBFD09E51F92160812 /* [CP] Check Pods Manifest.lock */,
+				5E39A00D1E7D8650834A650C /* [CP] Check Pods Manifest.lock */,
 				331C807D294A63A400263BE5 /* Sources */,
 				331C807F294A63A400263BE5 /* Resources */,
-				DDEFCE6AEC1BA922D2B0E65F /* Frameworks */,
+				CA2D3F39B8E9388440857317 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,15 +471,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
-				05422C2587FDE09C838839C4 /* [CP] Check Pods Manifest.lock */,
+				F05B78EE49656316D3C4E7DB /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
-				1265BF72F04B836F386E0896 /* [CP] Embed Pods Frameworks */,
-				0555971E9DDAE4FA4CCBF61E /* [CP] Copy Pods Resources */,
+				F5C607B30C275506D09CCF80 /* [CP] Embed Pods Frameworks */,
+				C6454C0261F4EA6E1472D0AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,6 +496,7 @@
 		97C146E61CF9000F007C117D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1510;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
@@ -262,57 +541,92 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C20E0E2D6C7EEB0030CD66 /* eyeshadowdir_mocha_brown.bundle in Resources */,
+				41C20E262D6C7EEB0030CD66 /* RosyResources.bundle in Resources */,
+				41C20DF92D6C7EEB0030CD66 /* blusherdir_apricot_pink.bundle in Resources */,
+				41C20E232D6C7EEB0030CD66 /* CommonResources.bundle in Resources */,
+				41C20E062D6C7EEB0030CD66 /* eyelashesdir_slender.bundle in Resources */,
+				41C20E092D6C7EEB0030CD66 /* eyelinerdir_pretty.bundle in Resources */,
+				41C20DED2D6C7EEB0030CD66 /* FaceDetectionModel.model in Resources */,
+				41C20E122D6C7EEB0030CD66 /* lipstickdir_bean_paste_pink.bundle in Resources */,
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
-				410208D22D59E76C00FBAFBE /* Resources in Resources */,
+				41C20E252D6C7EEB0030CD66 /* PendantResources.bundle in Resources */,
+				41C20E0C2D6C7EEB0030CD66 /* eyelinerdir_wildcat.bundle in Resources */,
+				41C20DFB2D6C7EEB0030CD66 /* blusherdir_peach.bundle in Resources */,
+				41C20E072D6C7EEB0030CD66 /* eyelashesdir_tender.bundle in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
+				41C20E152D6C7EEB0030CD66 /* lipstickdir_sweet_orange.bundle in Resources */,
+				41C20E0F2D6C7EEB0030CD66 /* eyeshadowdir_shimmer_pink.bundle in Resources */,
+				41C20DEE2D6C7EEB0030CD66 /* SegmentationModel.model in Resources */,
+				41C20DF12D6C7EEB0030CD66 /* Cool.bundle in Resources */,
+				41C20E132D6C7EEB0030CD66 /* lipstickdir_coral.bundle in Resources */,
+				41C20DFA2D6C7EEB0030CD66 /* blusherdir_milk_orange.bundle in Resources */,
+				41C20E242D6C7EEB0030CD66 /* FaceWhiteningResources.bundle in Resources */,
+				41C20DFE2D6C7EEB0030CD66 /* coloredcontactsdir_chocolate_brown.bundle in Resources */,
+				41C20E202D6C7EEB0030CD66 /* xiaomai.bundle in Resources */,
+				41C20E1D2D6C7EEB0030CD66 /* lengbai.bundle in Resources */,
+				41C20E1C2D6C7EEB0030CD66 /* fenbai.bundle in Resources */,
+				41C20E1F2D6C7EEB0030CD66 /* nuanbai.bundle in Resources */,
+				41C20E142D6C7EEB0030CD66 /* lipstickdir_rust_red.bundle in Resources */,
+				41C20E222D6C7EEB0030CD66 /* ClarityResources.bundle in Resources */,
+				41C20E292D6C83BA0030CD66 /* Backgrounds.bundle in Resources */,
+				41C20E1E2D6C7EEB0030CD66 /* meihei.bundle in Resources */,
+				41C20DF42D6C7EEB0030CD66 /* Film-like.bundle in Resources */,
+				41C20E0D2D6C7EEB0030CD66 /* eyeshadowdir_mist_pink.bundle in Resources */,
+				41C20E0A2D6C7EEB0030CD66 /* eyelinerdir_scheming.bundle in Resources */,
+				41C20DF72D6C7EEB0030CD66 /* Sunset.bundle in Resources */,
+				41C20E012D6C7EEB0030CD66 /* coloredcontactsdir_polar_lights_brown.bundle in Resources */,
+				41C20E042D6C7EEB0030CD66 /* eyelashesdir_curl.bundle in Resources */,
+				41C20DFC2D6C7EEB0030CD66 /* blusherdir_slightly_drunk.bundle in Resources */,
+				41C20E162D6C7EEB0030CD66 /* lipstickdir_velvet_red.bundle in Resources */,
+				41C20E0B2D6C7EEB0030CD66 /* eyelinerdir_temperament.bundle in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
+				41C20E272D6C7EEB0030CD66 /* TeethWhiteningResources.bundle in Resources */,
+				41C20E082D6C7EEB0030CD66 /* eyelinerdir_natural.bundle in Resources */,
+				41C20E192D6C7EEB0030CD66 /* makeupdir_milky_eyes.bundle in Resources */,
+				41C20E182D6C7EEB0030CD66 /* makeupdir_flawless.bundle in Resources */,
+				41C20E1A2D6C7EEB0030CD66 /* makeupdir_pure_and_sexy.bundle in Resources */,
+				41C20E1B2D6C7EEB0030CD66 /* makeupdir_vulnerable_and_innocenteyes.bundle in Resources */,
+				41C20DFF2D6C7EEB0030CD66 /* coloredcontactsdir_darknight_black.bundle in Resources */,
+				41C20E172D6C7EEB0030CD66 /* makeupdir_cutie_and_cool.bundle in Resources */,
+				41C20E052D6C7EEB0030CD66 /* eyelashesdir_natural.bundle in Resources */,
+				41C20DF22D6C7EEB0030CD66 /* Cozily.bundle in Resources */,
+				41C20E002D6C7EEB0030CD66 /* coloredcontactsdir_mystery_brown_green.bundle in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
+				41C20DF52D6C7EEB0030CD66 /* Fresh.bundle in Resources */,
+				41C20DF02D6C7EEB0030CD66 /* Brighten.bundle in Resources */,
+				41C20E032D6C7EEB0030CD66 /* eyelashesdir_bushy.bundle in Resources */,
+				41C20DF32D6C7EEB0030CD66 /* Creamy.bundle in Resources */,
+				41C20DFD2D6C7EEB0030CD66 /* blusherdir_sweet_orange.bundle in Resources */,
+				41C20E102D6C7EEB0030CD66 /* eyeshadowdir_tea_brown.bundle in Resources */,
+				41C20E022D6C7EEB0030CD66 /* coloredcontactsdir_starry_blue.bundle in Resources */,
+				41C20DEF2D6C7EEB0030CD66 /* Autumn.bundle in Resources */,
+				41C20E112D6C7EEB0030CD66 /* eyeshadowdir_vitality_orange.bundle in Resources */,
+				41C20DF62D6C7EEB0030CD66 /* Night.bundle in Resources */,
+				41C20DF82D6C7EEB0030CD66 /* Sweet.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05422C2587FDE09C838839C4 /* [CP] Check Pods Manifest.lock */ = {
+		3B06AD1E1E4923F5004D2608 /* Thin Binary */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "Thin Binary";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Runner-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
 		};
-		0555971E9DDAE4FA4CCBF61E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		08494CEBFD09E51F92160812 /* [CP] Check Pods Manifest.lock */ = {
+		5E39A00D1E7D8650834A650C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,7 +648,61 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1265BF72F04B836F386E0896 /* [CP] Embed Pods Frameworks */ = {
+		9740EEB61CF901F6004384FC /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+		};
+		C6454C0261F4EA6E1472D0AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F05B78EE49656316D3C4E7DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Runner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5C607B30C275506D09CCF80 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -350,37 +718,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		3B06AD1E1E4923F5004D2608 /* Thin Binary */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}",
-			);
-			name = "Thin Binary";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
-		};
-		9740EEB61CF901F6004384FC /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -436,6 +773,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -465,6 +803,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -506,14 +845,14 @@
 		};
 		331C8088294A63A400263BE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B82E747D8E1344C5F11FA1DB /* Pods-RunnerTests.debug.xcconfig */;
+			baseConfigurationReference = 6EA3BEAFECF313D4741540B0 /* Pods-RunnerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zegocloud.livestreaming.cohosting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zegocloud.livestreaming.cohosting.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -524,14 +863,14 @@
 		};
 		331C8089294A63A400263BE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 411C9DCF865D6A724B7BD86C /* Pods-RunnerTests.release.xcconfig */;
+			baseConfigurationReference = 73D1BC4A02C51A9330C71F41 /* Pods-RunnerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zegocloud.livestreaming.cohosting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zegocloud.livestreaming.cohosting.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Runner";
@@ -540,14 +879,14 @@
 		};
 		331C808A294A63A400263BE5 /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EADA555A031F9FC8B448AA08 /* Pods-RunnerTests.profile.xcconfig */;
+			baseConfigurationReference = 4AEAE25E940DAAD7628FA370 /* Pods-RunnerTests.profile.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zegocloud.livestreaming.cohosting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zegocloud.livestreaming.cohosting.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Runner";
@@ -558,6 +897,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -587,6 +927,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -613,6 +954,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -642,6 +984,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
