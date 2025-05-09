@@ -80,7 +80,7 @@ lib
 
 ![](./docs/2.png)
 
-
+<!-- 
 ## 2.3 Add beauty effects resources
 
 Advanced beauty effects require corresponding beauty resources to be effective.
@@ -106,7 +106,7 @@ Click to download the [beauty resources](https://storage.zego.im/sdk-doc/Pics/ze
 
 2. Copy the downloaded `BeautyResources` folder to the assets directory.
 
-<img src="https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/live/effects/android/resources.png">
+<img src="https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/live/effects/android/resources.png"> -->
 
 
 
@@ -177,7 +177,7 @@ Advanced beauty currently supports a total of 12 types of features, including: b
 If you don't need a certain feature, you can comment out the corresponding item in the `zego_beauty_data.dart` file.
 
 ![](./docs/3.png)
-#### Delete beauty resources
+<!-- #### Delete beauty resources
 
 After you comment out the unnecessary beauty features, you also need to delete the unused beauty resources.
 
@@ -314,7 +314,7 @@ If you don't need this feature, you can delete the following resources.
 ```
 /BeautyResources/BackgroundSegmentation.model
 /BeautyResources/BackgroundImages/
-```
+``` -->
 
 
 
