@@ -328,7 +328,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoFilterEditor(name: type.name),
+      editor: ZegoFilterEditor(name: type.bundleName),
     );
   }
 
@@ -338,7 +338,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoLipstickEditor(name: type.name),
+      editor: ZegoLipstickEditor(name: type.bundleName),
     );
   }
 
@@ -348,7 +348,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoBlusherMakeupEditor(name: type.name),
+      editor: ZegoBlusherMakeupEditor(name: type.bundleName),
     );
   }
 
@@ -358,7 +358,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoEyelashesEditor(name: type.name),
+      editor: ZegoEyelashesEditor(name: type.bundleName),
     );
   }
 
@@ -368,7 +368,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoEyelinerEditor(name: type.name),
+      editor: ZegoEyelinerEditor(name: type.bundleName),
     );
   }
 
@@ -378,7 +378,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoEyeshadowEditor(name: type.name),
+      editor: ZegoEyeshadowEditor(name: type.bundleName),
     );
   }
 
@@ -388,7 +388,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoColoredContactsEditor(name: type.name),
+      editor: ZegoColoredContactsEditor(name: type.bundleName),
     );
   }
 
@@ -398,7 +398,7 @@ extension EffectsServiceExtension on EffectsService {
       maxValue: 100,
       defaultValue: 50,
       type: type,
-      editor: ZegoStyleMakeupEditor(name: type.name),
+      editor: ZegoStyleMakeupEditor(name: type.bundleName),
     );
   }
 
